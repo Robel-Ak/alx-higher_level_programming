@@ -1,5 +1,5 @@
 #!/usr/bin/node
-let list = require('./100-data.js').list;
+/* Maps an array and multiplies each element eith it's index */
+const list = require('./100-data').list;
 console.log(list);
-let newList = list.map((x, index) => x * index);
-console.log(newList);
+console.log(list.map((element, index) => element * index));
