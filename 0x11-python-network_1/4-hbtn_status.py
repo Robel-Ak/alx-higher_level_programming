@@ -1,11 +1,9 @@
-#!/USR/BIN/PYTHON3
-"""
-FETCHES HTTPS://INTRANET.HBTN.IO/STATUS
-"""
-IF __NAME__ == '__MAIN__':
-    IMPORT REQUESTS
-    R = REQUESTS.GET('HTTPS://INTRANET.HBTN.IO/STATUS')
-    TEXT = R.TEXT
-    PRINT("BODY RESPONSE:")
-    PRINT("\T- TYPE: {}".FORMAT(TYPE(TEXT)))
-    PRINT("\T- CONTENT: {}".FORMAT(TEXT))
+#!/usr/bin/python3
+""" Uses requests module to fetch URL status"""
+
+import requests
+
+if __name__ == '__main__':
+    response = requests.get('https://intranet.hbtn.io/status')
+    print("Body response:\n\t- type: {}\n\t- content: {}"
+          .format(type(response.text), response.text))
